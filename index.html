@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0025)https://tbgift.pages.dev/ -->
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Total Battle Gift URLs</title>
@@ -167,10 +167,11 @@
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdeTQSEl0_LmiHAExBjnDxCF9VdD2TjrY6c-LZNuLCC4kzlKA/formResponse" method="POST" target="_self">
       <div>
         <label for="entry.1591633300">Platform:</label><br>
-        <input type="radio" name="entry.1591633300" value="Browser"> Browser<br>
-        <input type="radio" name="entry.1591633300" value="iOS"> iOS<br>
+        <input type="radio" name="entry.1591633300" value="Browser for Windows"> Browser for Windows<br>
+        <input type="radio" name="entry.1591633300" value="Browser for MAC"> Browser for MAC<br>
+        <input type="radio" name="entry.1591633300" value="iOS/iPad"> iOS/iPad<br>
         <input type="radio" name="entry.1591633300" value="Android"> Android<br>
-        <input type="radio" name="entry.1591633300" value="PC Application"> PC Application<br>
+        <input type="radio" name="entry.1591633300" value="PC App"> PC App<br>
       </div>
       <input type="submit" value="Submit">
 </form>
@@ -208,7 +209,25 @@
         background-color: #45a049;
       }
     </style>
-        
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdeTQSEl0_LmiHAExBjnDxCF9VdD2TjrY6c-LZNuLCC4kzlKA/viewform?embedded=true" width="640" height="577" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+       <script>
+            // Function to get a cookie by name
+            function getCookie(name) {
+              const value = `; ${document.cookie}`;
+              const parts = value.split(`; ${name}=`);
+              if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+          
+            // Check if the user has already submitted the form
+            window.onload = function() {
+              if (getCookie('formSubmitted')) {
+                document.getElementById('myForm').innerHTML = "<p>You've already submitted your response.</p>";
+              }
+            };
+          
+            // Set a cookie when the form is submitted
+            document.getElementById('myForm').onsubmit = function() {
+              document.cookie = "formSubmitted=true; path=/; max-age=" + (60 * 60 * 24 * 30); // Cookie lasts for 30 days
+            };
+          </script>
+           
 </body></html>
